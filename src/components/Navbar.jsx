@@ -28,10 +28,10 @@ const Navbar = () => {
           <Link
             to="/"
             className="text-white hover:text-gray-300 transition duration-300 ease-in-out">
-            Home
+            Inicio
           </Link>
           <Link
-            to="/Products"
+            to="/products"
             className="text-white hover:text-gray-300 transition duration-300 ease-in-out">
             Productos
           </Link>
@@ -65,15 +65,15 @@ const Navbar = () => {
             </svg>
           </button>
           {isMobileMenuOpen && (
-            <div className="absolute top-16 right-0 bg-gray-800 w-full">
+            <div className="absolute top-16 right-0 bg-gray-800 w-full z-10">
               <Link
                 to="/"
                 className="block text-white p-4 border-b border-gray-700 hover:bg-gray-700 transition duration-300 ease-in-out"
                 onClick={toggleMobileMenu}>
-                Home
+                Inicio
               </Link>
               <Link
-                to="/productos"
+                to="/products"
                 className="block text-white p-4 border-b border-gray-700 hover:bg-gray-700 transition duration-300 ease-in-out"
                 onClick={toggleMobileMenu}>
                 Productos
@@ -82,13 +82,13 @@ const Navbar = () => {
                 to="/services"
                 className="block text-white p-4 border-b border-gray-700 hover:bg-gray-700 transition duration-300 ease-in-out"
                 onClick={toggleMobileMenu}>
-                Services
+                Servicios
               </Link>
               <Link
                 to="/contact"
                 className="block text-white p-4 hover:bg-gray-700 transition duration-300 ease-in-out"
                 onClick={toggleMobileMenu}>
-                Contact Us
+                Contactanos
               </Link>
             </div>
           )}
