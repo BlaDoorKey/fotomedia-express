@@ -76,7 +76,7 @@ const Services = () => {
         {products.map((product) => (
           <div
             key={product.id}
-            className={`bg-white rounded-lg shadow-md p-4 transition-transform ${
+            className={`bg-white rounded-lg shadow-md p-4 transition-transform border-2 border-black ${
               hoveredProductId === product.id ? "transform scale-110 bg-slate-200 transition ease-in" : ""
             }`}
             onMouseEnter={() => setHoveredProductId(product.id)}

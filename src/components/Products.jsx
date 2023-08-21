@@ -58,7 +58,7 @@ const Productos = () => {
         {products.map((product) => (
           <div
             key={product.id}
-            className={`bg-white rounded-lg shadow-lg p-4 transition-transform  ${
+            className={`bg-white rounded-lg shadow-lg p-4 transition-transform border-2 border-black  ${
               hoveredProductId === product.id ? "transform scale-110" : ""
             }`}
             onMouseEnter={() => setHoveredProductId(product.id)}
