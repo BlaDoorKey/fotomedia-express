@@ -56,7 +56,7 @@ const Contact = () => {
               className="absolute top-0 left-0 w-full h-full"></iframe>
           </div>
           <p className="text-black text-4xl text-center underline">
-            ¡Ven a visitarnos en nuestra ubicación!
+            Av. Graciano Sánchez 7, Primero de Mayo Sur, Boca del Río, Ver. México
           </p>
         </div>
       </div>
