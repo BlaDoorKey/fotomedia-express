@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div className="h-screen bg-[url('./components/assets/localop.jpg')] bg-cover bg-no-repeat">
         <Navbar />
         <Routes>
