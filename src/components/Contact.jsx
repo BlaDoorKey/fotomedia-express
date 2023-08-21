@@ -33,7 +33,7 @@ const Contact = () => {
             Facebook
           </a>
           <a
-            href="mailto:photomediaexpress@gmail.com"
+            href="mailto:photomediaexpres@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center px-6 py-3 border-2 rounded-md bg-blue-700 text-white hover:bg-blue-800 transition duration-300">
