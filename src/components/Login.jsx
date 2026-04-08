@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { gsap } from 'gsap';
 
 const Login = () => {
+  const loginBoxRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(loginBoxRef.current, {
+      duration: 1,
+      x: -50,
+      opacity: 0,
+      ease: 'power3.out'
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
+      <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full" ref={loginBoxRef}>
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Login</h2>
         <form>
           <div className="mb-4">

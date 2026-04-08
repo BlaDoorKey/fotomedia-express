@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -8,34 +9,50 @@ const Navbar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  useEffect(() => {
+    gsap.from(".nav-link", { 
+      duration: 1, 
+      y: -20, 
+      opacity: 0, 
+      stagger: 0.2, 
+      ease: "power3.out" 
+    });
+    gsap.from(".logo", { 
+      duration: 1, 
+      x: -20, 
+      opacity: 0, 
+      ease: "power3.out" 
+    });
+  }, []);
+
   return (
     <nav className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-white text-2xl font-bold tracking-wider">
+        <Link to="/" className="text-white text-2xl font-bold tracking-wider logo">
           <div className="flex items-center space-x-2">
             <img src="/Logo.png" alt="logo" width={40} height={40} className="rounded-full" />
             <span>Fotomedia Express</span>
           </div>
         </Link>
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="text-gray-300 hover:text-white transition duration-300 ease-in-out font-medium">
+          <Link to="/" className="text-gray-300 hover:text-white transition duration-300 ease-in-out font-medium nav-link">
             Inicio
           </Link>
-          <Link to="/products" className="text-gray-300 hover:text-white transition duration-300 ease-in-out font-medium">
+          <Link to="/products" className="text-gray-300 hover:text-white transition duration-300 ease-in-out font-medium nav-link">
             Productos
           </Link>
-          <Link to="/services" className="text-gray-300 hover:text-white transition duration-300 ease-in-out font-medium">
+          <Link to="/services" className="text-gray-300 hover:text-white transition duration-300 ease-in-out font-medium nav-link">
             Servicios
           </Link>
-          <Link to="/contact" className="text-gray-300 hover:text-white transition duration-300 ease-in-out font-medium">
+          <Link to="/contact" className="text-gray-300 hover:text-white transition duration-300 ease-in-out font-medium nav-link">
             Contáctanos
           </Link>
           <div className="flex items-center space-x-4">
-            <Link to="/login" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out font-semibold">
-              Login
+            <Link to="/login" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out font-semibold nav-link">
+              Inicia Sesión
             </Link>
-            <Link to="/signup" className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out font-semibold">
-              Sign Up
+            <Link to="/signup" className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out font-semibold nav-link">
+              Registrarse
             </Link>
           </div>
         </div>
