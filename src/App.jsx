@@ -6,11 +6,13 @@ import Products from "./components/Products";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
     <Router basename="/">
-      <div className="min-h-screen bg-[url('./components/assets/localop.jpg')] bg-cover bg-repeat">
+      <div className="min-h-screen">
         <Navbar />
         <Routes>
           <Route
@@ -29,6 +31,14 @@ function App() {
           <Route
             path="/contact"
             element={<Contact />}
+          />
+          <Route
+            path="/login"
+            element={<Login />}
+          />
+          <Route
+            path="/signup"
+            element={<SignUp />}
           />
         </Routes>
       </div>
