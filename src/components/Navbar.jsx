@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { gsap } from "gsap";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -8,22 +7,6 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
-
-  useEffect(() => {
-    gsap.from(".nav-link", { 
-      duration: 1, 
-      y: -20, 
-      opacity: 0, 
-      stagger: 0.2, 
-      ease: "power3.out" 
-    });
-    gsap.from(".logo", { 
-      duration: 1, 
-      x: -20, 
-      opacity: 0, 
-      ease: "power3.out" 
-    });
-  }, []);
 
   return (
     <nav className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 shadow-lg">

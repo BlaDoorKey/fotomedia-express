@@ -1,38 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import React from "react";
 
 const Home = () => {
-  const heroRef = useRef(null);
-  const featuredRef = useRef(null);
-
-  useEffect(() => {
-    // Animate Hero Section
-    gsap.from(heroRef.current.children, {
-      duration: 1,
-      y: 30,
-      opacity: 0,
-      stagger: 0.3,
-      ease: "power3.out",
-    });
-
-    // Animate Featured Items
-    gsap.from(featuredRef.current.children, {
-      duration: 1,
-      scale: 0.9,
-      opacity: 0,
-      stagger: 0.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: featuredRef.current,
-        start: "top 80%",
-      },
-    });
-  }, []);
-
   return (
     <div className="bg-gray-100">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 px-4" ref={heroRef}>
+      <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-extrabold leading-tight mb-4">¡Tu Solución digital #1!</h1>
           <p className="text-xl text-gray-200 mb-8">Descubre la solución definitiva para potenciar tus fotografías.</p>
@@ -50,7 +22,7 @@ const Home = () => {
         </div>
 
         {/* Featured Items */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" ref={featuredRef}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
             <img src="/feature/etiquetas.jpg" alt="Etiquetas" className="w-full h-64 object-cover" />
             <div className="p-6">
