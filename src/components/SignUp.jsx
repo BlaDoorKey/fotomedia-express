@@ -1,22 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { gsap } from 'gsap';
 
 const SignUp = () => {
-  const signUpBoxRef = useRef(null);
-
-  useEffect(() => {
-    gsap.from(signUpBoxRef.current, {
-      duration: 1,
-      x: 50,
-      opacity: 0,
-      ease: 'power3.out'
-    });
-  }, []);
-
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full" ref={signUpBoxRef}>
+      <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Registrarse</h2>
         <form>
           <div className="mb-4">
